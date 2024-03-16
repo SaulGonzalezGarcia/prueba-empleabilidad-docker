@@ -9,12 +9,12 @@ jobs:
         container: node:16
         steps: 
             - run: node --version
-            name: Check the NODE version
+              name: Check the NODE version
             - run: npm --version
-            name: Check the NPM version
+              name: Check the NPM version
             - uses: actions/checkout@v4
-            name: Checkout code from GitHub
+              name: Checkout code from GitHub
             - run: npm install
-            name: Install NPM package
+              name: Install NPM package
             - run: node app.js
-            name: Run node Application
+              name: Run node Application
