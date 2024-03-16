@@ -1,12 +1,20 @@
+name: NODE CONTINOUS INTEGRATION
+
 on: push
 jobs:
-    first-job:
-       
+    #first-job:
+     build-node:
+        name: Build and Run a Node Application  
         runs-on: ubuntu-latest
         container: node:16
         steps: 
             - run: node --version
+            name: Check the NODE version
             - run: npm --version
+            name: Check the NPM version
             - uses: actions/checkout@v4
+            name: Checkout code from GitHub
             - run: npm install
+            name: Install NPM package
             - run: node app.js
+            name: Run node Application
